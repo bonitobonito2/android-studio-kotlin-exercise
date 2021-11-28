@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/button_navigation"
+    app:startDestination="@id/lay1">
+
+    <fragment
+        android:id="@+id/lay1"
+        android:name="com.example.kotlinisdavaleba4.gverdebi.lay1"
+        tools:layout="@layout/lay1"
+        android:label="lay1" >
+        <action
+            android:id="@+id/action_lay1_to_lay2"
+            app:destination="@id/lay2" />
+    </fragment>
+    <fragment
+        android:id="@+id/lay2"
+
+        android:name="com.example.kotlinisdavaleba4.gverdebi.lay2"
+        android:label="lay2">
+
+        <argument
+            android:name="name"
+            android:defaultValue=""
+            app:argType="string"
+
+            />
+        <argument
+            android:name="Username"
+            android:defaultValue=""
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/lay3"
+        android:name="com.example.kotlinisdavaleba4.gverdebi.lay3"
+        tools:layout="@layout/lay3"
+        android:label="lay3" />
+    <fragment
+        android:id="@+id/lay4"
+        android:name="com.example.kotlinisdavaleba4.gverdebi.lay4"
+        tools:layout="@layout/lay4"
+        android:label="lay4" >
+        <action
+            android:id="@+id/action_lay4_to_lay3"
+            app:destination="@id/lay3" />
+        <action
+            android:id="@+id/action_lay4_to_lay2"
+            app:destination="@id/lay2" />
+        <action
+            android:id="@+id/action_lay4_to_lay1"
+            app:destination="@id/lay1" />
+    </fragment>
+</navigation>
